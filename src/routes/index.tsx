@@ -8,12 +8,12 @@ import {
   PiggyBank,
   ShieldCheck,
   TrendingUp,
-  Users,
   Wallet,
 } from "lucide-react";
-import ebookCover from "@/assets/ebook-cover.png";
+import ebookCoverAsset from "@/assets/ebook-cover.png.asset.json";
 
-const CHECKOUT_URL = "#comprar-agora";
+const ebookCover = ebookCoverAsset.url;
+const CHECKOUT_URL = "https://pay.kursinha.com/c/6a8d8d3cfd7f330eb49b1db6";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -46,7 +46,6 @@ function LandingPage() {
         <HeroSection />
         <AuthoritySection />
         <LearnSection />
-        <ProofSection />
         <OfferSection />
         <GuaranteeSection />
         <FinalCTASection />
@@ -128,18 +127,9 @@ function HeroSection() {
               alt="Capa do ebook A Cabra da Minha Mãe — O Segredo da Riqueza, de Ricardo Kaniama"
               width={512}
               height={512}
-              className="relative z-10 w-full rounded-2xl shadow-2xl"
+              className="relative z-10 w-full animate-float rounded-2xl shadow-2xl"
               loading="eager"
             />
-            <div className="absolute bottom-4 left-1/2 z-20 w-[90%] -translate-x-1/2 rounded-xl bg-card/95 p-3 text-center shadow-lg backdrop-blur">
-              <p className="text-xs font-bold uppercase tracking-wide text-primary">
-                Ricardo Kaniama
-              </p>
-              <p className="text-sm font-semibold text-card-foreground">
-                A Cabra da Minha Mãe
-              </p>
-              <p className="text-xs text-muted-foreground">O Segredo da Riqueza</p>
-            </div>
           </div>
         </div>
       </div>
