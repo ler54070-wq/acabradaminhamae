@@ -103,11 +103,12 @@ function HeroSection() {
           <img
             src={ebookCover}
             alt="Capa do ebook A Cabra da Minha Mãe — O Segredo da Riqueza, de Ricardo Kaniama"
-            width={512}
-            height={512}
-            className="relative z-10 mx-auto w-full animate-float rounded-2xl shadow-2xl"
+            width={834}
+            height={1080}
+            className="relative z-10 mx-auto w-full animate-float drop-shadow-2xl"
             loading="eager"
           />
+
         </div>
 
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
