@@ -225,54 +225,6 @@ function LearnSection() {
   );
 }
 
-function ProofSection() {
-  return (
-    <section className="bg-primary px-4 py-14 text-primary-foreground sm:py-20">
-      <div className="mx-auto max-w-5xl">
-        <h2 className="text-center text-2xl font-bold tracking-tight sm:text-3xl">
-          Resultados reais de quem aplicou o método
-        </h2>
-        <p className="mx-auto mt-3 max-w-2xl text-center text-base text-primary-foreground/80">
-          Estes leitores começaram com pouco e mudaram a forma como tratam o dinheiro.
-        </p>
-
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {[1, 2, 3].map((n) => (
-            <div
-              key={n}
-              className="rounded-2xl bg-primary-foreground/10 p-5 backdrop-blur-sm"
-            >
-              <p className="text-sm italic text-primary-foreground/90">
-                “[DEPOIMENTO {n}: inserir aqui o testemunho real de um leitor que aplicou o método e
-                conseguiu criar reservas ou melhorar a sua vida financeira.]”
-              </p>
-              <div className="mt-4 flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-cta text-cta-foreground font-bold">
-                  {String.fromCharCode(64 + n)}
-                </div>
-                <div>
-                  <p className="font-semibold text-primary-foreground">[Nome do leitor]</p>
-                  <p className="text-xs text-primary-foreground/70">[Localidade / Profissão]</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-6 text-sm font-medium text-primary-foreground/90">
-          <span className="flex items-center gap-2">
-            <Users className="h-5 w-5" />
-            Comunidade de leitores PAIFI
-          </span>
-          <span className="flex items-center gap-2">
-            <BookOpen className="h-5 w-5" />
-            Baseado no método validado no mercado angolano
-          </span>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function OfferSection() {
   return (
