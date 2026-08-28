@@ -10,7 +10,7 @@ import {
   TrendingUp,
   Wallet,
 } from "lucide-react";
-import ebookCoverAsset from "@/assets/ebook-cover.png.asset.json";
+import ebookCoverAsset from "@/assets/ebook-cover.jpg.asset.json";
 
 const ebookCover = ebookCoverAsset.url;
 const CHECKOUT_URL = "https://pay.kursinha.com/c/6a8d8d3cfd7f330eb49b1db6";
