@@ -184,6 +184,10 @@
   .animate-float {
     animation: float 4s ease-in-out infinite;
   }
+
+  .animate-pulse-float {
+    animation: pulse-float 3s ease-in-out infinite;
+  }
 }
 
 @keyframes float {
@@ -192,6 +196,17 @@
   }
   50% {
     transform: translateY(-12px);
+  }
+}
+
+@keyframes pulse-float {
+  0%, 100% {
+    transform: translateY(0);
+    filter: brightness(1);
+  }
+  50% {
+    transform: translateY(-8px);
+    filter: brightness(1.12);
   }
 }
 
