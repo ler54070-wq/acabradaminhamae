@@ -10,7 +10,7 @@ import {
   TrendingUp,
   Wallet,
 } from "lucide-react";
-import ebookCoverAsset from "@/assets/ebook-cover.png.asset.json";
+import ebookCoverAsset from "@/assets/ebook-cover.jpg.asset.json";
 
 const ebookCover = ebookCoverAsset.url;
 const CHECKOUT_URL = "https://pay.kursinha.com/c/6a8d8d3cfd7f330eb49b1db6";
@@ -84,54 +84,50 @@ function HeroSection() {
   return (
     <section className="relative overflow-hidden px-4 pt-10 pb-16 sm:pt-16 sm:pb-24">
       <div className="bg-pattern-dots absolute inset-0 -z-10" />
-      <div className="mx-auto grid max-w-5xl items-center gap-10 lg:grid-cols-2">
-        <div className="order-2 lg:order-1">
-          <p className="mb-3 inline-flex items-center gap-2 rounded-full bg-gold-soft px-3 py-1 text-xs font-semibold text-cta-foreground">
-            <span className="h-2 w-2 rounded-full bg-cta" />
-            Ebook já disponível — leitura imediata
-          </p>
-          <h1 className="text-balance text-3xl font-extrabold leading-tight tracking-tight text-foreground sm:text-4xl md:text-5xl">
-            Trabalha o mês todo… e no fim o salário some sem deixar rasto?
-          </h1>
-          <p className="mt-5 text-balance text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            <strong className="text-foreground">A Cabra da Minha Mãe — O Segredo da Riqueza</strong> mostra-te
-            como guardares uma parte do que ganhas hoje, mesmo que o salário seja curto, para construíres
-            património amanhã. Educação financeira direta, sem enrolação.
-          </p>
+      <div className="mx-auto max-w-3xl text-center">
+        <p className="mb-3 inline-flex items-center gap-2 rounded-full bg-gold-soft px-3 py-1 text-xs font-semibold text-cta-foreground">
+          <span className="h-2 w-2 rounded-full bg-cta" />
+          Ebook já disponível — leitura imediata
+        </p>
+        <h1 className="text-balance text-3xl font-extrabold leading-tight tracking-tight text-foreground sm:text-4xl md:text-5xl">
+          Trabalha o mês todo… e no fim o salário some sem deixar rasto?
+        </h1>
+        <p className="mt-5 text-balance text-lg leading-relaxed text-muted-foreground sm:text-xl">
+          <strong className="text-foreground">A Cabra da Minha Mãe — O Segredo da Riqueza</strong> mostra-te
+          como guardares uma parte do que ganhas hoje, mesmo que o salário seja curto, para construíres
+          património amanhã. Educação financeira direta, sem enrolação.
+        </p>
 
-          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-            <a
-              href={CHECKOUT_URL}
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-cta px-6 py-4 text-base font-bold uppercase tracking-wide text-cta-foreground shadow-lg shadow-cta/25 transition hover:bg-cta-hover hover:shadow-cta/40"
-            >
-              <Wallet className="h-5 w-5" />
-              Quero sair do salário-a-salário
-            </a>
-            <span className="inline-flex items-center justify-center gap-2 text-sm font-medium text-muted-foreground">
-              <ShieldCheck className="h-5 w-5 text-cta" />
-              Garantia de 7 dias
-            </span>
-          </div>
-
-          <p className="mt-4 text-sm text-muted-foreground">
-            Por apenas <span className="font-bold text-foreground">1.500 Kz</span>. Leitura no telemóvel,
-            tablet ou computador.
-          </p>
+        <div className="relative mx-auto mt-8 w-full max-w-xs sm:max-w-sm">
+          <div className="absolute -inset-4 -z-10 rounded-full bg-gradient-to-br from-primary/20 via-cta/20 to-primary/5 blur-2xl" />
+          <img
+            src={ebookCover}
+            alt="Capa do ebook A Cabra da Minha Mãe — O Segredo da Riqueza, de Ricardo Kaniama"
+            width={512}
+            height={512}
+            className="relative z-10 mx-auto w-full animate-float rounded-2xl shadow-2xl"
+            loading="eager"
+          />
         </div>
 
-        <div className="order-1 flex justify-center lg:order-2">
-          <div className="relative w-full max-w-xs sm:max-w-sm">
-            <div className="absolute -inset-4 -z-10 rounded-full bg-gradient-to-br from-primary/20 via-cta/20 to-primary/5 blur-2xl" />
-            <img
-              src={ebookCover}
-              alt="Capa do ebook A Cabra da Minha Mãe — O Segredo da Riqueza, de Ricardo Kaniama"
-              width={512}
-              height={512}
-              className="relative z-10 w-full animate-float rounded-2xl shadow-2xl"
-              loading="eager"
-            />
-          </div>
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
+          <a
+            href={CHECKOUT_URL}
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-cta px-6 py-4 text-base font-bold uppercase tracking-wide text-cta-foreground shadow-lg shadow-cta/25 transition hover:bg-cta-hover hover:shadow-cta/40"
+          >
+            <Wallet className="h-5 w-5" />
+            Quero sair do salário-a-salário
+          </a>
+          <span className="inline-flex items-center justify-center gap-2 text-sm font-medium text-muted-foreground">
+            <ShieldCheck className="h-5 w-5 text-cta" />
+            Garantia de 7 dias
+          </span>
         </div>
+
+        <p className="mt-4 text-sm text-muted-foreground">
+          Por apenas <span className="font-bold text-foreground">1.500 Kz</span>. Leitura no telemóvel,
+          tablet ou computador.
+        </p>
       </div>
     </section>
   );
