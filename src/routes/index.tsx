@@ -71,7 +71,7 @@ function Header() {
         </div>
         <a
           href={CHECKOUT_URL}
-          className="inline-flex items-center justify-center rounded-full bg-cta px-4 py-2 text-xs font-bold uppercase tracking-wide text-cta-foreground shadow-sm transition hover:bg-cta-hover sm:text-sm"
+          className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-xs font-bold uppercase tracking-wide text-primary-foreground shadow-sm shadow-primary/25 transition hover:bg-primary/90 animate-pulse-float sm:text-sm"
         >
           Quero o meu exemplar
         </a>
@@ -113,7 +113,7 @@ function HeroSection() {
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
           <a
             href={CHECKOUT_URL}
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-cta px-6 py-4 text-base font-bold uppercase tracking-wide text-cta-foreground shadow-lg shadow-cta/25 transition hover:bg-cta-hover hover:shadow-cta/40"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-4 text-base font-bold uppercase tracking-wide text-primary-foreground shadow-lg shadow-primary/25 transition hover:bg-primary/90 hover:shadow-primary/40 animate-pulse-float"
           >
             <Wallet className="h-5 w-5" />
             Quero sair do salário-a-salário
@@ -282,7 +282,7 @@ function OfferSection() {
             <div className="mt-8 text-center">
               <a
                 href={CHECKOUT_URL}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-cta px-8 py-4 text-lg font-black uppercase tracking-wide text-cta-foreground shadow-xl shadow-cta/25 transition hover:bg-cta-hover hover:shadow-cta/40 sm:w-auto"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-lg font-black uppercase tracking-wide text-primary-foreground shadow-xl shadow-primary/25 transition hover:bg-primary/90 hover:shadow-primary/40 animate-pulse-float sm:w-auto"
               >
                 <Wallet className="h-5 w-5" />
                 Garantir o meu acesso por 1.500 Kz
@@ -332,7 +332,7 @@ function FinalCTASection() {
         </p>
         <a
           href={CHECKOUT_URL}
-          className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-cta px-8 py-4 text-lg font-black uppercase tracking-wide text-cta-foreground shadow-xl shadow-black/20 transition hover:bg-cta-hover sm:w-auto"
+          className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-lg font-black uppercase tracking-wide text-primary-foreground shadow-xl shadow-black/20 transition hover:bg-primary/90 animate-pulse-float sm:w-auto"
         >
           <TrendingUp className="h-5 w-5" />
           Começar a construir o meu património
@@ -390,7 +390,7 @@ function FAQSection() {
         <div className="mt-10 text-center">
           <a
             href={CHECKOUT_URL}
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-cta px-8 py-4 text-base font-black uppercase tracking-wide text-cta-foreground shadow-lg shadow-cta/25 transition hover:bg-cta-hover"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-base font-black uppercase tracking-wide text-primary-foreground shadow-lg shadow-primary/25 transition hover:bg-primary/90 animate-pulse-float"
           >
             <Wallet className="h-5 w-5" />
             Quero o ebook agora — 1.500 Kz
