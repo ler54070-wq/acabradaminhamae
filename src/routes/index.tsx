@@ -247,7 +247,9 @@ function OfferSection() {
             <p className="text-sm font-bold uppercase tracking-widest text-white">
               Oferta de lançamento — vagas limitadas
             </p>
+            <CountdownTimer />
           </div>
+
 
           <div className="p-6 sm:p-10">
             <div className="text-center">
