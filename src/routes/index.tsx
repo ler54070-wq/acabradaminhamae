@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 import {
   BookOpen,
   CheckCircle2,
@@ -7,6 +8,7 @@ import {
   Headphones,
   PiggyBank,
   ShieldCheck,
+  ShoppingBag,
   TrendingUp,
   Wallet,
 } from "lucide-react";
@@ -14,6 +16,19 @@ import ebookCoverAsset from "@/assets/ebook-cover.jpg.asset.json";
 
 const ebookCover = ebookCoverAsset.url;
 const CHECKOUT_URL = "https://pay.kursinha.com/c/6a8d8d3cfd7f330eb49b1db6";
+const COUNTDOWN_SECONDS = 10 * 60;
+
+const BUYERS = [
+  { name: "Pedro Nkanga", city: "Luanda" },
+  { name: "Ana Kiala", city: "Benguela" },
+  { name: "João Cassule", city: "Huambo" },
+  { name: "Marta Domingos", city: "Lubango" },
+  { name: "Adilson Neto", city: "Cabinda" },
+  { name: "Teresa Muanda", city: "Luanda" },
+  { name: "Osvaldo Mbala", city: "Malanje" },
+  { name: "Isabel Cardoso", city: "Namibe" },
+];
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
