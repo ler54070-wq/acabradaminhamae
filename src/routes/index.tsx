@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 import {
   BookOpen,
   CheckCircle2,
@@ -7,6 +8,7 @@ import {
   Headphones,
   PiggyBank,
   ShieldCheck,
+  ShoppingBag,
   TrendingUp,
   Wallet,
 } from "lucide-react";
@@ -14,6 +16,19 @@ import ebookCoverAsset from "@/assets/ebook-cover.jpg.asset.json";
 
 const ebookCover = ebookCoverAsset.url;
 const CHECKOUT_URL = "https://pay.kursinha.com/c/6a8d8d3cfd7f330eb49b1db6";
+const COUNTDOWN_SECONDS = 10 * 60;
+
+const BUYERS = [
+  { name: "Pedro Nkanga", city: "Luanda" },
+  { name: "Ana Kiala", city: "Benguela" },
+  { name: "João Cassule", city: "Huambo" },
+  { name: "Marta Domingos", city: "Lubango" },
+  { name: "Adilson Neto", city: "Cabinda" },
+  { name: "Teresa Muanda", city: "Luanda" },
+  { name: "Osvaldo Mbala", city: "Malanje" },
+  { name: "Isabel Cardoso", city: "Namibe" },
+];
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -53,9 +68,90 @@ function LandingPage() {
       </main>
 
       <Footer />
+      <PurchaseNotifications />
     </div>
   );
 }
+
+function CountdownTimer() {
+  const [secondsLeft, setSecondsLeft] = useState(COUNTDOWN_SECONDS);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setSecondsLeft((s) => (s <= 1 ? 0 : s - 1));
+    }, 1000);
+    return () => clearInterval(id);
+  }, []);
+
+  const minutes = String(Math.floor(secondsLeft / 60)).padStart(2, "0");
+  const seconds = String(secondsLeft % 60).padStart(2, "0");
+
+  return (
+    <div className="mt-3 flex flex-col items-center gap-2">
+      <p className="text-xs font-medium uppercase tracking-wide text-white/80">
+        Este preço expira em
+      </p>
+      <div className="flex items-center gap-2">
+        <span className="rounded-lg bg-white/15 px-3 py-2 text-2xl font-black tabular-nums text-white">
+          {minutes}
+        </span>
+        <span className="text-2xl font-black text-white/70">:</span>
+        <span className="rounded-lg bg-white/15 px-3 py-2 text-2xl font-black tabular-nums text-white">
+          {seconds}
+        </span>
+      </div>
+    </div>
+  );
+}
+
+function PurchaseNotifications() {
+  const [index, setIndex] = useState(0);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    let hideTimer: ReturnType<typeof setTimeout>;
+    const show = () => {
+      setVisible(true);
+      hideTimer = setTimeout(() => {
+        setVisible(false);
+        setIndex((i) => (i + 1) % BUYERS.length);
+      }, 5000);
+    };
+    const first = setTimeout(show, 6000);
+    const loop = setInterval(show, 14000);
+    return () => {
+      clearTimeout(first);
+      clearTimeout(hideTimer);
+      clearInterval(loop);
+    };
+  }, []);
+
+  const buyer = BUYERS[index]!;
+
+  return (
+    <div
+      aria-live="polite"
+      className={`fixed bottom-4 left-4 z-50 max-w-[19rem] transition-all duration-500 ${
+        visible ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-4 opacity-0"
+      }`}
+    >
+      <div className="flex items-center gap-3 rounded-2xl border border-border bg-card p-3 shadow-xl">
+        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
+          <ShoppingBag className="h-5 w-5" />
+        </div>
+        <div className="min-w-0">
+          <p className="truncate text-sm font-bold text-card-foreground">
+            {buyer.name} acabou de comprar
+          </p>
+          <p className="text-xs text-muted-foreground">
+            {buyer.city} · há poucos instantes
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 
 function Header() {
   return (
@@ -232,7 +328,9 @@ function OfferSection() {
             <p className="text-sm font-bold uppercase tracking-widest text-white">
               Oferta de lançamento — vagas limitadas
             </p>
+            <CountdownTimer />
           </div>
+
 
           <div className="p-6 sm:p-10">
             <div className="text-center">
