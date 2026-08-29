@@ -65,7 +65,7 @@ function Header() {
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
             <BookOpen className="h-4 w-4" />
           </div>
-          <span className="text-sm font-bold tracking-tight text-foreground sm:text-base">
+          <span className="text-sm font-bold tracking-tight text-primary sm:text-base">
             Ricardo Kaniama
           </span>
         </div>
@@ -120,7 +120,7 @@ function HeroSection() {
             Quero sair do salário-a-salário
           </a>
           <span className="inline-flex items-center justify-center gap-2 text-sm font-medium text-muted-foreground">
-            <ShieldCheck className="h-5 w-5 text-cta" />
+            <ShieldCheck className="h-5 w-5 text-primary" />
             Garantia de 7 dias
           </span>
         </div>
@@ -225,11 +225,11 @@ function LearnSection() {
 
 function OfferSection() {
   return (
-    <section id="oferta" className="px-4 py-14 sm:py-20">
+    <section id="oferta" className="bg-primary px-4 py-14 sm:py-20">
       <div className="mx-auto max-w-4xl">
-        <div className="overflow-hidden rounded-3xl border-2 border-cta/30 bg-card shadow-xl">
-          <div className="bg-cta px-6 py-4 text-center">
-            <p className="text-sm font-bold uppercase tracking-widest text-cta-foreground">
+        <div className="overflow-hidden rounded-3xl border-2 border-primary/30 bg-card shadow-xl">
+          <div className="bg-blue-deep px-6 py-4 text-center">
+            <p className="text-sm font-bold uppercase tracking-widest text-white">
               Oferta de lançamento — vagas limitadas
             </p>
           </div>
@@ -250,7 +250,7 @@ function OfferSection() {
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               <div className="rounded-2xl border border-border bg-blue-soft/30 p-5">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-cta text-cta-foreground">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground">
                   <CheckCircle2 className="h-5 w-5" />
                 </div>
                 <h3 className="mt-3 font-bold text-card-foreground">Bónus 1</h3>
@@ -260,7 +260,7 @@ function OfferSection() {
                 </p>
               </div>
               <div className="rounded-2xl border border-border bg-blue-soft/30 p-5">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-cta text-cta-foreground">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground">
                   <Headphones className="h-5 w-5" />
                 </div>
                 <h3 className="mt-3 font-bold text-card-foreground">Bónus 2</h3>
@@ -303,7 +303,7 @@ function GuaranteeSection() {
   return (
     <section className="bg-blue-soft/40 px-4 py-12 sm:py-16">
       <div className="mx-auto flex max-w-3xl flex-col items-center gap-5 text-center sm:flex-row sm:text-left">
-        <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-cta text-cta-foreground shadow-lg">
+        <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg">
           <ShieldCheck className="h-10 w-10" />
         </div>
         <div>
