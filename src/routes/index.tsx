@@ -194,23 +194,23 @@ function HeroSection() {
           património amanhã. Educação financeira direta, sem enrolação.
         </p>
 
-        <div className="relative mx-auto mt-8 w-full max-w-xs sm:max-w-sm">
+        <div className="relative mx-auto mt-8 w-full max-w-[16rem] sm:max-w-sm md:max-w-md">
           <div className="absolute -inset-4 -z-10 rounded-full bg-gradient-to-br from-primary/20 via-cta/20 to-primary/5 blur-2xl" />
           <img
             src={ebookCover}
             alt="Capa do ebook A Cabra da Minha Mãe — O Segredo da Riqueza, de Ricardo Kaniama"
             width={834}
             height={1080}
-            className="relative z-10 mx-auto w-full animate-float drop-shadow-2xl"
+            className="relative z-10 mx-auto h-auto w-full max-w-full object-contain animate-float drop-shadow-2xl"
             loading="eager"
           />
 
         </div>
 
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
+        <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <a
             href={CHECKOUT_URL}
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-4 text-base font-bold uppercase tracking-wide text-primary-foreground shadow-lg shadow-primary/25 transition hover:bg-primary/90 hover:shadow-primary/40 animate-pulse-float"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-4 text-center text-sm font-bold uppercase tracking-wide text-primary-foreground shadow-lg shadow-primary/25 transition hover:bg-primary/90 hover:shadow-primary/40 animate-pulse-float sm:w-auto sm:px-6 sm:text-base"
           >
             <Wallet className="h-5 w-5" />
             Quero sair do salário-a-salário
