@@ -131,7 +131,7 @@ function PurchaseNotifications() {
   return (
     <div
       aria-live="polite"
-      className={`fixed bottom-4 left-4 z-50 max-w-[19rem] transition-all duration-500 ${
+      className={`fixed bottom-3 left-3 right-3 z-50 mx-auto w-auto max-w-[19rem] transition-all duration-500 sm:left-4 sm:right-auto sm:bottom-4 sm:mx-0 ${
         visible ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-4 opacity-0"
       }`}
     >
@@ -156,18 +156,18 @@ function PurchaseNotifications() {
 function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/95 backdrop-blur">
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
-        <div className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+      <div className="mx-auto grid max-w-5xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 py-3">
+        <div className="flex min-w-0 items-center gap-2">
+          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary text-primary-foreground">
             <BookOpen className="h-4 w-4" />
           </div>
-          <span className="text-sm font-bold tracking-tight text-primary sm:text-base">
+          <span className="truncate text-sm font-bold tracking-tight text-primary sm:text-base">
             Ricardo Kaniama
           </span>
         </div>
         <a
           href={CHECKOUT_URL}
-          className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-xs font-bold uppercase tracking-wide text-primary-foreground shadow-sm shadow-primary/25 transition hover:bg-primary/90 animate-pulse-float sm:text-sm"
+          className="inline-flex shrink-0 items-center justify-center whitespace-nowrap rounded-full bg-primary px-3 py-2 text-[11px] font-bold uppercase tracking-wide text-primary-foreground shadow-sm shadow-primary/25 transition hover:bg-primary/90 animate-pulse-float sm:px-4 sm:text-sm"
         >
           Quero o meu exemplar
         </a>
