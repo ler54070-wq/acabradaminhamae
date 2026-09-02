@@ -243,7 +243,7 @@ function AuthoritySection() {
           Financeira. Há anos ensina angolanos e africanos lusófonos a transformarem pequenos hábitos em
           riqueza real, sem promessas vazias e sem depender de grandes salários.
         </p>
-        <div className="mt-8 grid grid-cols-3 gap-4 sm:gap-6">
+        <div className="mt-8 grid grid-cols-3 gap-3 sm:gap-6">
           <div className="rounded-2xl bg-card p-4 shadow-sm">
             <p className="text-2xl font-black text-primary sm:text-3xl">PAIFI</p>
             <p className="text-xs text-muted-foreground sm:text-sm">Programa de Apoio à Independência Financeira</p>
@@ -323,23 +323,23 @@ function OfferSection() {
   return (
     <section id="oferta" className="bg-primary px-4 py-14 sm:py-20">
       <div className="mx-auto max-w-4xl">
-        <div className="overflow-hidden rounded-3xl border-2 border-primary/30 bg-card shadow-xl">
-          <div className="bg-blue-deep px-6 py-4 text-center">
-            <p className="text-sm font-bold uppercase tracking-widest text-white">
+        <div className="overflow-hidden rounded-2xl border-2 sm:rounded-3xl border-primary/30 bg-card shadow-xl">
+          <div className="bg-blue-deep px-4 py-4 text-center sm:px-6">
+            <p className="text-sm font-bold uppercase tracking-wide text-white sm:tracking-widest">
               Oferta de lançamento — vagas limitadas
             </p>
             <CountdownTimer />
           </div>
 
 
-          <div className="p-6 sm:p-10">
+          <div className="p-5 sm:p-10">
             <div className="text-center">
               <p className="text-sm text-muted-foreground">Investimento único</p>
-              <div className="mt-2 flex items-center justify-center gap-3">
-                <span className="text-2xl font-semibold text-muted-foreground line-through decoration-2">
+              <div className="mt-2 flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+                <span className="text-xl font-semibold text-muted-foreground line-through decoration-2 sm:text-2xl">
                   4.500 Kz
                 </span>
-                <span className="text-5xl font-black text-foreground sm:text-6xl">1.500 Kz</span>
+                <span className="text-4xl font-black text-foreground sm:text-6xl">1.500 Kz</span>
               </div>
               <p className="mt-2 text-sm text-muted-foreground">
                 Menos do que o gastas num jantar fora. Mas com retorno para a tua vida toda.
@@ -381,7 +381,7 @@ function OfferSection() {
             <div className="mt-8 text-center">
               <a
                 href={CHECKOUT_URL}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-lg font-black uppercase tracking-wide text-primary-foreground shadow-xl shadow-primary/25 transition hover:bg-primary/90 hover:shadow-primary/40 animate-pulse-float sm:w-auto"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-4 text-base font-black sm:px-8 sm:text-lg uppercase tracking-wide text-primary-foreground shadow-xl shadow-primary/25 transition hover:bg-primary/90 hover:shadow-primary/40 animate-pulse-float sm:w-auto"
               >
                 <Wallet className="h-5 w-5" />
                 Garantir o meu acesso por 1.500 Kz
@@ -421,8 +421,8 @@ function GuaranteeSection() {
 function FinalCTASection() {
   return (
     <section className="px-4 py-14 sm:py-20">
-      <div className="mx-auto max-w-3xl rounded-3xl bg-blue-deep p-8 text-center text-white shadow-2xl sm:p-12">
-        <h2 className="text-2xl font-bold leading-tight tracking-tight sm:text-4xl">
+      <div className="mx-auto max-w-3xl rounded-3xl bg-blue-deep p-6 text-center text-white shadow-2xl sm:p-12">
+        <h2 className="text-balance text-xl font-bold leading-tight tracking-tight sm:text-4xl">
           Daqui a 1 ano, vais desejar ter começado hoje
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
@@ -478,7 +478,7 @@ function FAQSection() {
               className="group rounded-2xl border border-border bg-card p-5 open:shadow-sm"
             >
               <summary className="flex cursor-pointer list-none items-center justify-between font-semibold text-card-foreground">
-                {faq.question}
+                <span className="pr-3 text-sm sm:text-base">{faq.question}</span>
                 <ChevronDown className="h-5 w-5 shrink-0 text-muted-foreground transition group-open:rotate-180" />
               </summary>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{faq.answer}</p>
@@ -489,7 +489,7 @@ function FAQSection() {
         <div className="mt-10 text-center">
           <a
             href={CHECKOUT_URL}
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-base font-black uppercase tracking-wide text-primary-foreground shadow-lg shadow-primary/25 transition hover:bg-primary/90 animate-pulse-float"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-4 text-sm font-black sm:w-auto sm:px-8 sm:text-base uppercase tracking-wide text-primary-foreground shadow-lg shadow-primary/25 transition hover:bg-primary/90 animate-pulse-float"
           >
             <Wallet className="h-5 w-5" />
             Quero o ebook agora — 1.500 Kz
