@@ -185,10 +185,10 @@ function HeroSection() {
           <span className="h-2 w-2 rounded-full bg-cta" />
           Ebook já disponível — leitura imediata
         </p>
-        <h1 className="text-balance text-[1.6rem] font-extrabold leading-tight tracking-tight text-foreground xs:text-3xl sm:text-4xl md:text-5xl">
+        <h1 className="text-balance text-[1.7rem] font-extrabold leading-tight tracking-tight text-foreground sm:text-4xl md:text-5xl">
           Trabalha o mês todo… e no fim o salário some sem deixar rasto?
         </h1>
-        <p className="mt-4 text-pretty text-base leading-relaxed text-muted-foreground sm:mt-5 sm:text-xl">>
+        <p className="mt-4 text-pretty text-base leading-relaxed text-muted-foreground sm:mt-5 sm:text-xl">
           <strong className="text-foreground">A Cabra da Minha Mãe — O Segredo da Riqueza</strong> mostra-te
           como guardares uma parte do que ganhas hoje, mesmo que o salário seja curto, para construíres
           património amanhã. Educação financeira direta, sem enrolação.
