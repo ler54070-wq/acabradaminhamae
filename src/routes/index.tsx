@@ -131,7 +131,7 @@ function PurchaseNotifications() {
   return (
     <div
       aria-live="polite"
-      className={`fixed bottom-4 left-4 z-50 max-w-[19rem] transition-all duration-500 ${
+      className={`fixed bottom-3 left-3 right-3 z-50 mx-auto w-auto max-w-[19rem] transition-all duration-500 sm:left-4 sm:right-auto sm:bottom-4 sm:mx-0 ${
         visible ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-4 opacity-0"
       }`}
     >
@@ -156,18 +156,18 @@ function PurchaseNotifications() {
 function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/95 backdrop-blur">
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
-        <div className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+      <div className="mx-auto grid max-w-5xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 py-3">
+        <div className="flex min-w-0 items-center gap-2">
+          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary text-primary-foreground">
             <BookOpen className="h-4 w-4" />
           </div>
-          <span className="text-sm font-bold tracking-tight text-primary sm:text-base">
+          <span className="truncate text-sm font-bold tracking-tight text-primary sm:text-base">
             Ricardo Kaniama
           </span>
         </div>
         <a
           href={CHECKOUT_URL}
-          className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-xs font-bold uppercase tracking-wide text-primary-foreground shadow-sm shadow-primary/25 transition hover:bg-primary/90 animate-pulse-float sm:text-sm"
+          className="inline-flex shrink-0 items-center justify-center whitespace-nowrap rounded-full bg-primary px-3 py-2 text-[11px] font-bold uppercase tracking-wide text-primary-foreground shadow-sm shadow-primary/25 transition hover:bg-primary/90 animate-pulse-float sm:px-4 sm:text-sm"
         >
           Quero o meu exemplar
         </a>
@@ -185,32 +185,32 @@ function HeroSection() {
           <span className="h-2 w-2 rounded-full bg-cta" />
           Ebook já disponível — leitura imediata
         </p>
-        <h1 className="text-balance text-3xl font-extrabold leading-tight tracking-tight text-foreground sm:text-4xl md:text-5xl">
+        <h1 className="text-balance text-[1.7rem] font-extrabold leading-tight tracking-tight text-foreground sm:text-4xl md:text-5xl">
           Trabalha o mês todo… e no fim o salário some sem deixar rasto?
         </h1>
-        <p className="mt-5 text-balance text-lg leading-relaxed text-muted-foreground sm:text-xl">
+        <p className="mt-4 text-pretty text-base leading-relaxed text-muted-foreground sm:mt-5 sm:text-xl">
           <strong className="text-foreground">A Cabra da Minha Mãe — O Segredo da Riqueza</strong> mostra-te
           como guardares uma parte do que ganhas hoje, mesmo que o salário seja curto, para construíres
           património amanhã. Educação financeira direta, sem enrolação.
         </p>
 
-        <div className="relative mx-auto mt-8 w-full max-w-xs sm:max-w-sm">
+        <div className="relative mx-auto mt-8 w-full max-w-[16rem] sm:max-w-sm md:max-w-md">
           <div className="absolute -inset-4 -z-10 rounded-full bg-gradient-to-br from-primary/20 via-cta/20 to-primary/5 blur-2xl" />
           <img
             src={ebookCover}
             alt="Capa do ebook A Cabra da Minha Mãe — O Segredo da Riqueza, de Ricardo Kaniama"
             width={834}
             height={1080}
-            className="relative z-10 mx-auto w-full animate-float drop-shadow-2xl"
+            className="relative z-10 mx-auto h-auto w-full max-w-full object-contain animate-float drop-shadow-2xl"
             loading="eager"
           />
 
         </div>
 
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
+        <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <a
             href={CHECKOUT_URL}
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-4 text-base font-bold uppercase tracking-wide text-primary-foreground shadow-lg shadow-primary/25 transition hover:bg-primary/90 hover:shadow-primary/40 animate-pulse-float"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-4 text-center text-sm font-bold uppercase tracking-wide text-primary-foreground shadow-lg shadow-primary/25 transition hover:bg-primary/90 hover:shadow-primary/40 animate-pulse-float sm:w-auto sm:px-6 sm:text-base"
           >
             <Wallet className="h-5 w-5" />
             Quero sair do salário-a-salário
@@ -243,7 +243,7 @@ function AuthoritySection() {
           Financeira. Há anos ensina angolanos e africanos lusófonos a transformarem pequenos hábitos em
           riqueza real, sem promessas vazias e sem depender de grandes salários.
         </p>
-        <div className="mt-8 grid grid-cols-3 gap-4 sm:gap-6">
+        <div className="mt-8 grid grid-cols-3 gap-3 sm:gap-6">
           <div className="rounded-2xl bg-card p-4 shadow-sm">
             <p className="text-2xl font-black text-primary sm:text-3xl">PAIFI</p>
             <p className="text-xs text-muted-foreground sm:text-sm">Programa de Apoio à Independência Financeira</p>
@@ -323,23 +323,23 @@ function OfferSection() {
   return (
     <section id="oferta" className="bg-primary px-4 py-14 sm:py-20">
       <div className="mx-auto max-w-4xl">
-        <div className="overflow-hidden rounded-3xl border-2 border-primary/30 bg-card shadow-xl">
-          <div className="bg-blue-deep px-6 py-4 text-center">
-            <p className="text-sm font-bold uppercase tracking-widest text-white">
+        <div className="overflow-hidden rounded-2xl border-2 sm:rounded-3xl border-primary/30 bg-card shadow-xl">
+          <div className="bg-blue-deep px-4 py-4 text-center sm:px-6">
+            <p className="text-sm font-bold uppercase tracking-wide text-white sm:tracking-widest">
               Oferta de lançamento — vagas limitadas
             </p>
             <CountdownTimer />
           </div>
 
 
-          <div className="p-6 sm:p-10">
+          <div className="p-5 sm:p-10">
             <div className="text-center">
               <p className="text-sm text-muted-foreground">Investimento único</p>
-              <div className="mt-2 flex items-center justify-center gap-3">
-                <span className="text-2xl font-semibold text-muted-foreground line-through decoration-2">
+              <div className="mt-2 flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+                <span className="text-xl font-semibold text-muted-foreground line-through decoration-2 sm:text-2xl">
                   4.500 Kz
                 </span>
-                <span className="text-5xl font-black text-foreground sm:text-6xl">1.500 Kz</span>
+                <span className="text-4xl font-black text-foreground sm:text-6xl">1.500 Kz</span>
               </div>
               <p className="mt-2 text-sm text-muted-foreground">
                 Menos do que o gastas num jantar fora. Mas com retorno para a tua vida toda.
@@ -381,7 +381,7 @@ function OfferSection() {
             <div className="mt-8 text-center">
               <a
                 href={CHECKOUT_URL}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-lg font-black uppercase tracking-wide text-primary-foreground shadow-xl shadow-primary/25 transition hover:bg-primary/90 hover:shadow-primary/40 animate-pulse-float sm:w-auto"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-4 text-base font-black sm:px-8 sm:text-lg uppercase tracking-wide text-primary-foreground shadow-xl shadow-primary/25 transition hover:bg-primary/90 hover:shadow-primary/40 animate-pulse-float sm:w-auto"
               >
                 <Wallet className="h-5 w-5" />
                 Garantir o meu acesso por 1.500 Kz
@@ -421,8 +421,8 @@ function GuaranteeSection() {
 function FinalCTASection() {
   return (
     <section className="px-4 py-14 sm:py-20">
-      <div className="mx-auto max-w-3xl rounded-3xl bg-blue-deep p-8 text-center text-white shadow-2xl sm:p-12">
-        <h2 className="text-2xl font-bold leading-tight tracking-tight sm:text-4xl">
+      <div className="mx-auto max-w-3xl rounded-3xl bg-blue-deep p-6 text-center text-white shadow-2xl sm:p-12">
+        <h2 className="text-balance text-xl font-bold leading-tight tracking-tight sm:text-4xl">
           Daqui a 1 ano, vais desejar ter começado hoje
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
@@ -478,7 +478,7 @@ function FAQSection() {
               className="group rounded-2xl border border-border bg-card p-5 open:shadow-sm"
             >
               <summary className="flex cursor-pointer list-none items-center justify-between font-semibold text-card-foreground">
-                {faq.question}
+                <span className="pr-3 text-sm sm:text-base">{faq.question}</span>
                 <ChevronDown className="h-5 w-5 shrink-0 text-muted-foreground transition group-open:rotate-180" />
               </summary>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{faq.answer}</p>
@@ -489,7 +489,7 @@ function FAQSection() {
         <div className="mt-10 text-center">
           <a
             href={CHECKOUT_URL}
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-base font-black uppercase tracking-wide text-primary-foreground shadow-lg shadow-primary/25 transition hover:bg-primary/90 animate-pulse-float"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-4 text-sm font-black sm:w-auto sm:px-8 sm:text-base uppercase tracking-wide text-primary-foreground shadow-lg shadow-primary/25 transition hover:bg-primary/90 animate-pulse-float"
           >
             <Wallet className="h-5 w-5" />
             Quero o ebook agora — 1.500 Kz
