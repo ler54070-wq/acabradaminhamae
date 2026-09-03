@@ -222,7 +222,7 @@ function HeroSection() {
         </div>
 
         <p className="mt-4 text-sm text-muted-foreground">
-          Por apenas <span className="font-bold text-foreground">1.500 Kz</span>. Leitura no telemóvel,
+          Por apenas <span className="font-bold text-foreground">2.500 Kz</span>. Leitura no telemóvel,
           tablet ou computador.
         </p>
       </div>
@@ -337,9 +337,9 @@ function OfferSection() {
               <p className="text-sm text-muted-foreground">Investimento único</p>
               <div className="mt-2 flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
                 <span className="text-xl font-semibold text-muted-foreground line-through decoration-2 sm:text-2xl">
-                  4.500 Kz
+                  6.500 Kz
                 </span>
-                <span className="text-4xl font-black text-foreground sm:text-6xl">1.500 Kz</span>
+                <span className="text-4xl font-black text-foreground sm:text-6xl">2.500 Kz</span>
               </div>
               <p className="mt-2 text-sm text-muted-foreground">
                 Menos do que o gastas num jantar fora. Mas com retorno para a tua vida toda.
@@ -384,7 +384,7 @@ function OfferSection() {
                 className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-4 text-base font-black sm:px-8 sm:text-lg uppercase tracking-wide text-primary-foreground shadow-xl shadow-primary/25 transition hover:bg-primary/90 hover:shadow-primary/40 animate-pulse-float sm:w-auto"
               >
                 <Wallet className="h-5 w-5" />
-                Garantir o meu acesso por 1.500 Kz
+                Garantir o meu acesso por 2.500 Kz
               </a>
               <p className="mt-3 text-xs text-muted-foreground">
                 Vagas limitadas para esta turma de lançamento. Após o fecho, o valor volta ao preço normal.
@@ -410,7 +410,7 @@ function GuaranteeSection() {
           </h2>
           <p className="mt-2 text-muted-foreground">
             Compra o ebook, lê durante uma semana e aplica o que aprendeste. Se achares que não valeu o
-            investimento, devolvemos-te os 1.500 Kz. Sem perguntas, sem burocracia. O risco é nosso.
+            investimento, devolvemos-te os 2.500 Kz. Sem perguntas, sem burocracia. O risco é nosso.
           </p>
         </div>
       </div>
@@ -447,9 +447,9 @@ function FinalCTASection() {
 function FAQSection() {
   const faqs = [
     {
-      question: "1.500 Kz não é muito caro para um ebook?",
+      question: "2.500 Kz não é muito caro para um ebook?",
       answer:
-        "O preço normal é 4.500 Kz. Hoje levas o ebook + checklist prático + áudio-resumo por menos de metade. Mais barato do que um jantar fora, mas com o potencial de mudar a tua relação com o dinheiro para sempre.",
+        "O preço normal é 6.500 Kz. Hoje levas o ebook + checklist prático + áudio-resumo por menos de metade. Mais barato do que um jantar fora, mas com o potencial de mudar a tua relação com o dinheiro para sempre.",
     },
     {
       question: "Não tenho tempo para ler. Vou conseguir aproveitar?",
@@ -492,7 +492,7 @@ function FAQSection() {
             className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-4 text-sm font-black sm:w-auto sm:px-8 sm:text-base uppercase tracking-wide text-primary-foreground shadow-lg shadow-primary/25 transition hover:bg-primary/90 animate-pulse-float"
           >
             <Wallet className="h-5 w-5" />
-            Quero o ebook agora — 1.500 Kz
+            Quero o ebook agora — 2.500 Kz
           </a>
         </div>
       </div>
