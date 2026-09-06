@@ -194,16 +194,17 @@ function HeroSection() {
           património amanhã. Educação financeira direta, sem enrolação.
         </p>
 
-        <div className="relative mx-auto mt-8 w-full max-w-[16rem] sm:max-w-sm md:max-w-md">
+        <div className="relative mx-auto mt-8 w-full max-w-md sm:max-w-2xl md:max-w-3xl">
           <div className="absolute -inset-4 -z-10 rounded-full bg-gradient-to-br from-primary/20 via-cta/20 to-primary/5 blur-2xl" />
           <img
             src={ebookCover}
-            alt="Capa do ebook A Cabra da Minha Mãe — O Segredo da Riqueza, de Ricardo Kaniama"
-            width={834}
-            height={1080}
+            alt="Mockup do livro A Cabra da Minha Mãe — O Segredo da Riqueza"
+            width={1536}
+            height={1024}
             className="relative z-10 mx-auto h-auto w-full max-w-full object-contain animate-float drop-shadow-2xl"
             loading="eager"
           />
+
 
         </div>
 
