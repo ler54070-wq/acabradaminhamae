@@ -14,7 +14,7 @@ import {
   Wallet,
 } from "lucide-react";
 import ebookCoverAsset from "@/assets/ebook-cover.jpg.asset.json";
-import bonusDebtAsset from "@/assets/bonus-sair-das-dividas.jpg.asset.json";
+import bonusDebtAsset from "@/assets/bonus-sair-das-dividas.png.asset.json";
 import bonusSpreadsheetAsset from "@/assets/bonus-planilha.jpg.asset.json";
 import bonusSaveAsset from "@/assets/bonus-guardar-mes.jpg.asset.json";
 
