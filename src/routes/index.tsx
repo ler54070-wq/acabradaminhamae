@@ -5,6 +5,7 @@ import {
   CheckCircle2,
   ChevronDown,
   Clock,
+  FileSpreadsheet,
   Headphones,
   PiggyBank,
   ShieldCheck,
