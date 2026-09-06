@@ -62,6 +62,7 @@ function LandingPage() {
         <HeroSection />
         <AuthoritySection />
         <LearnSection />
+        <BonusSection />
         <OfferSection />
         <GuaranteeSection />
         <FinalCTASection />
