@@ -14,8 +14,14 @@ import {
   Wallet,
 } from "lucide-react";
 import ebookCoverAsset from "@/assets/ebook-cover.jpg.asset.json";
+import bonusDebtAsset from "@/assets/bonus-sair-das-dividas.jpg.asset.json";
+import bonusSpreadsheetAsset from "@/assets/bonus-planilha.jpg.asset.json";
+import bonusSaveAsset from "@/assets/bonus-guardar-mes.jpg.asset.json";
 
 const ebookCover = ebookCoverAsset.url;
+const bonusDebt = bonusDebtAsset.url;
+const bonusSpreadsheet = bonusSpreadsheetAsset.url;
+const bonusSave = bonusSaveAsset.url;
 const CHECKOUT_URL = "https://pay.kursinha.com/c/6a8d8d3cfd7f330eb49b1db6";
 const COUNTDOWN_SECONDS = 10 * 60;
 
