@@ -14,8 +14,14 @@ import {
   Wallet,
 } from "lucide-react";
 import ebookCoverAsset from "@/assets/ebook-cover.jpg.asset.json";
+import bonusDebtAsset from "@/assets/bonus-sair-das-dividas.jpg.asset.json";
+import bonusSpreadsheetAsset from "@/assets/bonus-planilha.jpg.asset.json";
+import bonusSaveAsset from "@/assets/bonus-guardar-mes.jpg.asset.json";
 
 const ebookCover = ebookCoverAsset.url;
+const bonusDebt = bonusDebtAsset.url;
+const bonusSpreadsheet = bonusSpreadsheetAsset.url;
+const bonusSave = bonusSaveAsset.url;
 const CHECKOUT_URL = "https://pay.kursinha.com/c/6a8d8d3cfd7f330eb49b1db6";
 const COUNTDOWN_SECONDS = 10 * 60;
 
@@ -324,17 +330,20 @@ function LearnSection() {
 function BonusSection() {
   const bonuses = [
     {
-      icon: <ShieldCheck className="h-6 w-6" />,
+      image: bonusDebt,
+      alt: "Ilustração 3D: libertar-se das dívidas",
       title: "Como sair das dívidas",
       desc: "Um passo a passo simples para parar de perder dinheiro com juros e recuperar o controlo das tuas finanças.",
     },
     {
-      icon: <FileSpreadsheet className="h-6 w-6" />,
+      image: bonusSpreadsheet,
+      alt: "Ilustração 3D: planilha de controlo financeiro no computador e telemóvel",
       title: "Planilha de controlo financeiro",
       desc: "A mesma planilha que uso no PAIFI para saberes, de forma clara, para onde vai o teu dinheiro todos os meses.",
     },
     {
-      icon: <PiggyBank className="h-6 w-6" />,
+      image: bonusSave,
+      alt: "Ilustração 3D: poupar dinheiro todos os meses",
       title: "Quanto guardar por mês mesmo ganhando pouco",
       desc: "Descobre o valor real que podes reservar hoje — sem mentiras, sem promessas, apenas matemática aplicada ao teu salário.",
     },
@@ -355,12 +364,19 @@ function BonusSection() {
           {bonuses.map((item) => (
             <div
               key={item.title}
-              className="flex flex-col gap-4 rounded-2xl border border-border bg-card p-6 shadow-sm transition hover:border-primary/30 hover:shadow-md"
+              className="flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition hover:border-primary/30 hover:shadow-md"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                {item.icon}
+              <div className="relative aspect-square w-full overflow-hidden bg-primary/5">
+                <img
+                  src={item.image}
+                  alt={item.alt}
+                  width={1024}
+                  height={1024}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition duration-500 hover:scale-105"
+                />
               </div>
-              <div>
+              <div className="p-5">
                 <h3 className="font-bold text-card-foreground">{item.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
               </div>
