@@ -5,6 +5,7 @@ import {
   CheckCircle2,
   ChevronDown,
   Clock,
+  FileSpreadsheet,
   Headphones,
   PiggyBank,
   ShieldCheck,
@@ -61,6 +62,7 @@ function LandingPage() {
         <HeroSection />
         <AuthoritySection />
         <LearnSection />
+        <BonusSection />
         <OfferSection />
         <GuaranteeSection />
         <FinalCTASection />
@@ -310,6 +312,57 @@ function LearnSection() {
               <div>
                 <h3 className="font-bold text-card-foreground">{item.title}</h3>
                 <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function BonusSection() {
+  const bonuses = [
+    {
+      icon: <ShieldCheck className="h-6 w-6" />,
+      title: "Como sair das dívidas",
+      desc: "Um passo a passo simples para parar de perder dinheiro com juros e recuperar o controlo das tuas finanças.",
+    },
+    {
+      icon: <FileSpreadsheet className="h-6 w-6" />,
+      title: "Planilha de controlo financeiro",
+      desc: "A mesma planilha que uso no PAIFI para saberes, de forma clara, para onde vai o teu dinheiro todos os meses.",
+    },
+    {
+      icon: <PiggyBank className="h-6 w-6" />,
+      title: "Quanto guardar por mês mesmo ganhando pouco",
+      desc: "Descobre o valor real que podes reservar hoje — sem mentiras, sem promessas, apenas matemática aplicada ao teu salário.",
+    },
+  ];
+
+  return (
+    <section className="border-y border-border bg-blue-soft/40 px-4 py-14 sm:py-20">
+      <div className="mx-auto max-w-5xl">
+        <div className="mb-10 text-center">
+          <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+            Além do ebook, levas estes 3 bónus
+          </h2>
+          <p className="mt-3 text-muted-foreground">
+            Ferramentas práticas para começares ainda esta semana.
+          </p>
+        </div>
+        <div className="grid gap-5 sm:grid-cols-3">
+          {bonuses.map((item) => (
+            <div
+              key={item.title}
+              className="flex flex-col gap-4 rounded-2xl border border-border bg-card p-6 shadow-sm transition hover:border-primary/30 hover:shadow-md"
+            >
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                {item.icon}
+              </div>
+              <div>
+                <h3 className="font-bold text-card-foreground">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
               </div>
             </div>
           ))}
