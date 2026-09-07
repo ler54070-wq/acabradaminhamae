@@ -244,28 +244,53 @@ function HeroSection() {
 function AuthoritySection() {
   return (
     <section className="border-y border-border bg-blue-soft/40 px-4 py-14 sm:py-20">
-      <div className="mx-auto max-w-3xl text-center">
-        <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-          Quem te ensina já passou por isto
-        </h2>
-        <p className="mt-4 text-balance text-base leading-relaxed text-muted-foreground sm:text-lg">
-          <strong className="text-foreground">Ricardo Kaniama</strong> é especialista em educação financeira e
-          criador do <strong className="text-foreground">PAIFI</strong> — Programa de Apoio à Independência
-          Financeira. Há anos ensina angolanos e africanos lusófonos a transformarem pequenos hábitos em
-          riqueza real, sem promessas vazias e sem depender de grandes salários.
-        </p>
-        <div className="mt-8 grid grid-cols-3 gap-3 sm:gap-6">
-          <div className="rounded-2xl bg-card p-4 shadow-sm">
-            <p className="text-2xl font-black text-primary sm:text-3xl">PAIFI</p>
-            <p className="text-xs text-muted-foreground sm:text-sm">Programa de Apoio à Independência Financeira</p>
+      <div className="mx-auto max-w-5xl">
+        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
+          <div className="order-2 lg:order-1">
+            <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+              Quem te ensina já passou por isto
+            </h2>
+            <div className="mt-4 text-balance text-base leading-relaxed text-muted-foreground sm:text-lg space-y-4">
+              <p>
+                <strong className="text-foreground">Ricardo Kaniama</strong> é empresário, autor, coach e
+                conferencista internacional, especializado em educação financeira. Começou do zero, sem capital
+                nem rede de contactos, e construiu a sua trajectória estudando na prática os princípios de criação
+                de riqueza e inteligência financeira.
+              </p>
+              <p>
+                É autor de vários livros — entre eles <strong className="text-foreground">"A Cabra da Minha Mãe"</strong>,
+                inspirado numa história real da sua própria família — e hoje ajuda milhares de pessoas a
+                desenvolverem autonomia financeira e uma mentalidade orientada para a construção de riqueza,
+                mesmo partindo de poucos recursos.
+              </p>
+            </div>
+            <div className="mt-8 grid grid-cols-3 gap-3 sm:gap-6">
+              <div className="rounded-2xl bg-card p-4 shadow-sm">
+                <p className="text-2xl font-black text-primary sm:text-3xl">PAIFI</p>
+                <p className="text-xs text-muted-foreground sm:text-sm">Programa de Apoio à Independência Financeira</p>
+              </div>
+              <div className="rounded-2xl bg-card p-4 shadow-sm">
+                <p className="text-2xl font-black text-primary sm:text-3xl">+Anos</p>
+                <p className="text-xs text-muted-foreground sm:text-sm">A ensinar finanças simples e aplicáveis</p>
+              </div>
+              <div className="rounded-2xl bg-card p-4 shadow-sm">
+                <p className="text-2xl font-black text-primary sm:text-3xl">Angola</p>
+                <p className="text-xs text-muted-foreground sm:text-sm">Realidade do dia a dia do kwanza</p>
+              </div>
+            </div>
           </div>
-          <div className="rounded-2xl bg-card p-4 shadow-sm">
-            <p className="text-2xl font-black text-primary sm:text-3xl">+Anos</p>
-            <p className="text-xs text-muted-foreground sm:text-sm">A ensinar finanças simples e aplicáveis</p>
-          </div>
-          <div className="rounded-2xl bg-card p-4 shadow-sm">
-            <p className="text-2xl font-black text-primary sm:text-3xl">Angola</p>
-            <p className="text-xs text-muted-foreground sm:text-sm">Realidade do dia a dia do kwanza</p>
+          <div className="order-1 flex justify-center lg:order-2">
+            <div className="relative w-full max-w-sm">
+              <div className="absolute -inset-4 -z-10 rounded-3xl bg-gradient-to-br from-primary/20 via-cta/10 to-primary/5 blur-2xl" />
+              <img
+                src={ricardoKaniama}
+                alt="Ricardo Kaniama — coach e conferencista internacional em educação financeira"
+                width={1024}
+                height={1024}
+                className="relative z-10 h-auto w-full rounded-3xl object-cover shadow-2xl"
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
       </div>
