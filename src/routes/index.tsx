@@ -193,12 +193,7 @@ function Header() {
             Ricardo Kaniama
           </span>
         </div>
-        <a
-          href={CHECKOUT_URL}
-          className="inline-flex shrink-0 items-center justify-center whitespace-nowrap rounded-full bg-primary px-3 py-2 text-[11px] font-bold uppercase tracking-wide text-primary-foreground shadow-sm shadow-primary/25 transition hover:bg-primary/90 animate-pulse-float sm:px-4 sm:text-sm"
-        >
-          Quero o meu exemplar
-        </a>
+        <HeaderCountdown />
       </div>
     </header>
   );
