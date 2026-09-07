@@ -83,7 +83,7 @@ function LandingPage() {
   );
 }
 
-function CountdownTimer() {
+function useCountdown() {
   const [secondsLeft, setSecondsLeft] = useState(COUNTDOWN_SECONDS);
 
   useEffect(() => {
@@ -95,6 +95,11 @@ function CountdownTimer() {
 
   const minutes = String(Math.floor(secondsLeft / 60)).padStart(2, "0");
   const seconds = String(secondsLeft % 60).padStart(2, "0");
+  return { minutes, seconds };
+}
+
+function CountdownTimer() {
+  const { minutes, seconds } = useCountdown();
 
   return (
     <div className="mt-3 flex flex-col items-center gap-2">
@@ -110,6 +115,19 @@ function CountdownTimer() {
           {seconds}
         </span>
       </div>
+    </div>
+  );
+}
+
+function HeaderCountdown() {
+  const { minutes, seconds } = useCountdown();
+
+  return (
+    <div className="flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1.5 text-primary">
+      <Clock className="h-3.5 w-3.5 shrink-0" />
+      <span className="text-[11px] font-bold uppercase tracking-wide sm:text-xs">
+        Oferta termina em {minutes}:{seconds}
+      </span>
     </div>
   );
 }
