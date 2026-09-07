@@ -331,57 +331,84 @@ function BonusSection() {
   const bonuses = [
     {
       image: bonusDebt,
-      alt: "Ilustração 3D: libertar-se das dívidas",
+      alt: "Bónus Como sair das dívidas — A Cabra da Minha Mãe",
       title: "Como sair das dívidas",
-      desc: "Um passo a passo simples para parar de perder dinheiro com juros e recuperar o controlo das tuas finanças.",
+      desc: "Passo a passo para parares de perder dinheiro com juros e recuperares o controlo das tuas finanças.",
+      value: "1.500 Kz",
     },
     {
       image: bonusSpreadsheet,
-      alt: "Ilustração 3D: planilha de controlo financeiro no computador e telemóvel",
+      alt: "Bónus Planilha de controlo financeiro — A Cabra da Minha Mãe",
       title: "Planilha de controlo financeiro",
-      desc: "A mesma planilha que uso no PAIFI para saberes, de forma clara, para onde vai o teu dinheiro todos os meses.",
+      desc: "A mesma planilha do PAIFI para saberes, de forma clara, para onde vai o teu dinheiro todos os meses.",
+      value: "1.000 Kz",
     },
     {
       image: bonusSave,
-      alt: "Ilustração 3D: poupar dinheiro todos os meses",
+      alt: "Bónus Quanto guardar por mês — A Cabra da Minha Mãe",
       title: "Quanto guardar por mês mesmo ganhando pouco",
-      desc: "Descobre o valor real que podes reservar hoje — sem mentiras, sem promessas, apenas matemática aplicada ao teu salário.",
+      desc: "Descobre o valor real que podes reservar hoje — matemática simples aplicada ao teu salário.",
+      value: "1.500 Kz",
     },
   ];
+
+  const totalValue = bonuses.reduce((sum, b) => sum + parseInt(b.value.replace(/\D/g, "")), 0);
 
   return (
     <section className="border-y border-border bg-blue-soft/40 px-4 py-14 sm:py-20">
       <div className="mx-auto max-w-5xl">
-        <div className="mb-10 text-center">
+        <div className="mb-8 text-center sm:mb-10">
+          <p className="mb-2 inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-primary">
+            <Gift className="h-3.5 w-3.5" />
+            3 bónus incluídos
+          </p>
           <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-            Além do ebook, levas estes 3 bónus
+            Além do ebook, levas estes materiais práticos
           </h2>
-          <p className="mt-3 text-muted-foreground">
-            Ferramentas práticas para começares ainda esta semana.
+          <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
+            Ferramentas que uso no PAIFI para começares ainda esta semana, sem gastares mais nada.
           </p>
         </div>
-        <div className="grid gap-5 sm:grid-cols-3">
-          {bonuses.map((item) => (
+
+        <div className="grid gap-4 sm:grid-cols-3">
+          {bonuses.map((item, idx) => (
             <div
               key={item.title}
-              className="flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition hover:border-primary/30 hover:shadow-md"
+              className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg"
             >
-              <div className="relative aspect-square w-full overflow-hidden bg-primary/5">
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-gradient-to-br from-primary/10 to-blue-soft/50">
+                <span className="absolute left-3 top-3 z-10 flex h-7 w-7 items-center justify-center rounded-full bg-primary text-xs font-black text-primary-foreground shadow-md">
+                  {idx + 1}
+                </span>
                 <img
                   src={item.image}
                   alt={item.alt}
                   width={1024}
                   height={1024}
                   loading="lazy"
-                  className="h-full w-full object-cover transition duration-500 hover:scale-105"
+                  className="h-full w-full object-contain p-4 transition duration-500 group-hover:scale-105"
                 />
               </div>
-              <div className="p-5">
-                <h3 className="font-bold text-card-foreground">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
+              <div className="flex flex-1 flex-col p-5">
+                <div className="flex items-start justify-between gap-3">
+                  <h3 className="font-bold leading-snug text-card-foreground">{item.title}</h3>
+                  <span className="shrink-0 rounded-md bg-gold-soft px-2 py-1 text-xs font-bold text-cta-foreground">
+                    {item.value}
+                  </span>
+                </div>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-8 rounded-2xl border border-border bg-card p-5 text-center shadow-sm sm:mt-10 sm:p-6">
+          <p className="text-sm text-muted-foreground">
+            Valor total dos bónus: <span className="font-bold text-foreground">{totalValue.toLocaleString("pt-AO")} Kz</span>
+          </p>
+          <p className="mt-1 text-xs text-muted-foreground">
+            Incluídos gratuitamente na compra do ebook hoje.
+          </p>
         </div>
       </div>
     </section>
