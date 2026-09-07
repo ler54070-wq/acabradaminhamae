@@ -233,7 +233,7 @@ function HeroSection() {
 
         <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <a
-            href={CHECKOUT_URL}
+            href="#oferta"
             className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-4 text-center text-sm font-bold uppercase tracking-wide text-primary-foreground shadow-lg shadow-primary/25 transition hover:bg-primary/90 hover:shadow-primary/40 animate-pulse-float sm:w-auto sm:px-6 sm:text-base"
           >
             <Wallet className="h-5 w-5" />
