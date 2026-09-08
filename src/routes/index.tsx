@@ -430,9 +430,11 @@ function BonusSection() {
                 <img
                   src={item.image}
                   alt={item.alt}
-                  width={1024}
-                  height={1024}
+                  width={1200}
+                  height={800}
+                  sizes="(max-width: 640px) 92vw, 360px"
                   loading="lazy"
+                  decoding="async"
                   className="h-full w-full object-contain p-4 transition duration-500 group-hover:scale-105"
                 />
               </div>
