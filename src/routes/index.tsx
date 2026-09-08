@@ -222,11 +222,15 @@ function HeroSection() {
           <img
             src={ebookCover}
             alt="Mockup do livro A Cabra da Minha Mãe — O Segredo da Riqueza"
-            width={1536}
-            height={1024}
+            width={1200}
+            height={800}
+            sizes="(max-width: 640px) 92vw, 768px"
             className="relative z-10 mx-auto h-auto w-full max-w-full object-contain animate-float drop-shadow-2xl"
             loading="eager"
+            decoding="async"
+            fetchPriority="high"
           />
+
 
 
         </div>
@@ -298,11 +302,14 @@ function AuthoritySection() {
               <img
                 src={ricardoKaniama}
                 alt="Ricardo Kaniama — coach e conferencista internacional em educação financeira"
-                width={1024}
-                height={1024}
+                width={1086}
+                height={1448}
+                sizes="(max-width: 640px) 92vw, 384px"
                 className="relative z-10 h-auto w-full rounded-3xl object-cover shadow-2xl"
                 loading="lazy"
+                decoding="async"
               />
+
             </div>
           </div>
         </div>
@@ -423,9 +430,11 @@ function BonusSection() {
                 <img
                   src={item.image}
                   alt={item.alt}
-                  width={1024}
-                  height={1024}
+                  width={1200}
+                  height={800}
+                  sizes="(max-width: 640px) 92vw, 360px"
                   loading="lazy"
+                  decoding="async"
                   className="h-full w-full object-contain p-4 transition duration-500 group-hover:scale-105"
                 />
               </div>
