@@ -302,11 +302,14 @@ function AuthoritySection() {
               <img
                 src={ricardoKaniama}
                 alt="Ricardo Kaniama — coach e conferencista internacional em educação financeira"
-                width={1024}
-                height={1024}
+                width={1086}
+                height={1448}
+                sizes="(max-width: 640px) 92vw, 384px"
                 className="relative z-10 h-auto w-full rounded-3xl object-cover shadow-2xl"
                 loading="lazy"
+                decoding="async"
               />
+
             </div>
           </div>
         </div>
