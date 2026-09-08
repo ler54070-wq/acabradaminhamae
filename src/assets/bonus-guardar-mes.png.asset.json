@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "asset_id": "75d5b206-d18f-4d0c-8ff8-25bcf34454bc",
+  "asset_id": "a8d710c4-d5f1-48f4-b38e-063fd85c353f",
   "project_id": "58cdb878-85cb-4339-ba6e-0d4411468eff",
-  "url": "/__l5e/assets-v1/75d5b206-d18f-4d0c-8ff8-25bcf34454bc/bonus-guardar-mes.png",
-  "r2_key": "a/v1/58cdb878-85cb-4339-ba6e-0d4411468eff/75d5b206-d18f-4d0c-8ff8-25bcf34454bc/bonus-guardar-mes.png",
-  "original_filename": "bonus-guardar-mes.png",
-  "size": 2122307,
-  "content_type": "image/png",
-  "created_at": "2026-09-06T13:14:38Z"
+  "url": "/__l5e/assets-v1/a8d710c4-d5f1-48f4-b38e-063fd85c353f/bonus-guardar-v2.webp",
+  "r2_key": "a/v1/58cdb878-85cb-4339-ba6e-0d4411468eff/a8d710c4-d5f1-48f4-b38e-063fd85c353f/bonus-guardar-v2.webp",
+  "original_filename": "bonus-guardar-v2.webp",
+  "size": 128364,
+  "content_type": "image/webp",
+  "created_at": "2026-09-08T06:45:06Z"
 }
