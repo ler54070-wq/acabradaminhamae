@@ -222,11 +222,15 @@ function HeroSection() {
           <img
             src={ebookCover}
             alt="Mockup do livro A Cabra da Minha Mãe — O Segredo da Riqueza"
-            width={1536}
-            height={1024}
+            width={1200}
+            height={800}
+            sizes="(max-width: 640px) 92vw, 768px"
             className="relative z-10 mx-auto h-auto w-full max-w-full object-contain animate-float drop-shadow-2xl"
             loading="eager"
+            decoding="async"
+            fetchPriority="high"
           />
+
 
 
         </div>
