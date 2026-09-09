@@ -18,6 +18,7 @@ import bonusDebtAsset from "@/assets/bonus-sair-das-dividas.png.asset.json";
 import bonusSpreadsheetAsset from "@/assets/bonus-planilha.png.asset.json";
 import bonusSaveAsset from "@/assets/bonus-guardar-mes.png.asset.json";
 import ricardoKaniamaAsset from "@/assets/ricardo-kaniama.png.asset.json";
+import { ExitIntentPopup } from "@/components/exit-intent-popup";
 
 const ebookCover = ebookCoverAsset.url;
 const bonusDebt = bonusDebtAsset.url;
