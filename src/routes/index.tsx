@@ -79,6 +79,7 @@ function LandingPage() {
 
       <Footer />
       <PurchaseNotifications />
+      <ExitIntentPopup checkoutUrl={CHECKOUT_URL} />
     </div>
   );
 }
